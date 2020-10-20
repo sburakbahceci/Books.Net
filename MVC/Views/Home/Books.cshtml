@@ -1,0 +1,22 @@
+﻿@using MVC.Models
+@model Books
+@{
+    ViewBag.Title = "Books";
+}
+
+<div>
+    <h2>About Book</h2>
+    <h4>SeriNo: @Model.serialno</h4>
+    <h4>Book Name: @Model.booksname</h4>
+    <h4>Author Name: @Model.authorsname</h4>
+    <h4>Age: @Model.age</h4>
+</div>
+
+@using (Html.BeginForm())
+{
+<p>Seri No: @Html.TextBoxFor(x => x.serialno)</p> <br />
+<p>Book Name: @Html.TextBoxFor(x => x.booksname)</p><br />
+<p>Author Name: @Html.TextBoxFor(x => x.authorsname)</p><br />
+<p>Age: @Html.TextBoxFor(x => x.age)</p><br />
+    <input type="submit" value="Send"/>
+}
